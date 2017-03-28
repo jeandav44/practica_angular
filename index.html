@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html ng-app="magazineApp" xmlns="http://www.w3.org/1999/xhtml" xml:lang="es" lang="es">
+<head>
+  <meta charset="utf-8">
+  <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+  Remove this if you use the .htaccess -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Magazine App</title>
+  <!-- <link rel="shortcut icon" href="images/chair.png"/> -->
+  <meta name="author" content="Jean David Andrade Pazmiño">
+  <meta name="author" content="Aleix Velasco Calvo">
+
+  <!-- css-->
+  <link rel="stylesheet" type="text/css" href="vendors/bootstrap/css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/index.css" />
+  <!-- jQuery-->
+  <script src="vendors/jquery/js/jQuery.js" type="text/javascript" xml:space="preserve"></script>
+
+  <!-- jQuery Cookies management-->
+  <script src="vendors/jquery/jquery-cookie/jquery.cookie.js" type="text/javascript" xml:space="preserve"></script>
+
+  <!-- Angular-->
+  <script src="vendors/angular/js/angular.min.js" type="text/javascript" xml:space="preserve"></script>
+  <script src="vendors/angular/js/angular-file-upload.js" type="text/javascript" xml:space="preserve"></script>
+  <script src="vendors/angular/js/angular-i18n/angular-locale_es-es.js" type="text/javascript" xml:space="preserve"></script>
+  <script src="vendors/angular/js/ng-currency.js" type="text/javascript" xml:space="preserve"></script>
+  <script src="vendors/angular/js/angular-cookies.js" type="text/javascript" xml:space="preserve"></script>
+  <script src="vendors/bootstrap/js/ui-bootstrap-tpls-2.3.1.js" type="text/javascript" xml:space="preserve"></script>
+  <script src="vendors/angular/js/dirPagination.js" type="text/javascript" xml:space="preserve"></script>
+
+  <!-- Own code-->
+
+  <!-- Model-->
+  <script src="js/model/userObj.js" type="text/javascript" xml:space="preserve"></script> 
+  <script src="js/model/CategoryObj.js" type="text/javascript" xml:space="preserve"></script> 
+  <script src="js/model/CardObj.js" type="text/javascript" xml:space="preserve"></script>
+
+  <!-- Controllers-->
+  <script src="js/app.js" type="text/javascript" xml:space="preserve"></script>
+  <script src="js/controller/mainController.js" type="text/javascript" xml:space="preserve"></script>
+  <script src="js/controller/createUserController.js" type="text/javascript" xml:space="preserve"></script>
+  <script src="js/controller/createArticleController.js" type="text/javascript" xml:space="preserve"></script>
+  <script src="js/controller/createCategoryController.js" type="text/javascript" xml:space="preserve"></script>
+  <script src="js/controller/createCardController.js" type="text/javascript" xml:space="preserve"></script>
+</head>
+<body ng-controller="mainController as mainRoomCtrl">
+  <div class="container jumbotron">
+
+    <div class="container">
+      <h1>Magazine App</h1>
+    </div>
+
+    <div class="container col-md-11">
+      <ul class="nav nav-pills">
+        <li role="presentation"><a ng-click="showAction=0"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a></li>
+        <li role="presentation"><a ng-click="showAction=1"><b>Create User</b></a></li>
+        <li role="presentation"><a ng-click="showAction=2"><b>Create Article</b></a></li>
+        <li role="presentation"><a ng-click="showAction=3"><b>Create Category</b></a></li>
+        <li role="presentation"><a ng-click="showAction=4"><b>Create Card</b></a></li>
+      </ul>
+    </div>
+    <br/>
+    <br/>
+
+    <div id="home" class="form-horizontal" ng-show="showAction==0" >
+      <br/>
+      <home></home>
+    </div>
+
+    <div id="createUser" class="form-horizontal" ng-show="showAction==1">
+      <br/>
+      <create-user-form></create-user-form>
+    </div>
+
+    <div id="createArticle" class="form-horizontal" ng-show="showAction==2">
+      <br/>
+      <create-article-form></create-article-form>
+    </div>
+
+    <div id="createCategory" class="form-horizontal" ng-show="showAction==3">
+      <br/>
+      <create-category-form></create-category-form>
+    </div>
+
+    <div id="createCard" class="form-horizontal" ng-show="showAction==4">
+      <br/>
+      <create-card-form></create-card-form>
+    </div>
+
+      <footer class="footer">
+        <div class="container">
+          <p>© 2016 DAW-M06, Institut Provençana.</p>
+          <p>Creating by:<span class="separating"> </span>Jean David Andrade Pazmiño<span class="separating"> - </span>Aleix Velasco Calvo</p>
+        </div>
+      </footer>
+    </div>
+  </div>
+</body>
+</html>

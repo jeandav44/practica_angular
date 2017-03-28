@@ -1,0 +1,14 @@
+<div class="well" ng-controller="createCategoryController as createCategoryCtrl">
+  <h2>Create Category</h2>
+  <form  name="createCategoryForm" novalidate ng-submit="createCategoryForm.$valid && createCategoryCtrl.submit()">
+    <div for="formGroup">Category:
+      <input type="text" class="form-control" ng-model="category.name" placeholder="Example Category: 'Action'" required/>
+    </div>
+    <br/>
+    <button type="button" class="btn btn-default" ng-click="$parent.showAction=0">Back</button>
+    <div class="pull-right">
+      <button type="button" class="btn btn-success" ng-click="createCategoryCtrl.popUp()">Show Categories</button>
+      <button type="submit" class="btn btn-primary" ng-disabled="createCategoryForm.$invalid">Create Category</button>
+    </div>
+  </form>
+</div>

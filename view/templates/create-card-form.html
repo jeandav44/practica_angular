@@ -1,0 +1,25 @@
+<div class="well" ng-controller="createCardController as createCardCtrl">
+  <h2>Create Card</h2>
+    <form  name="createCardForm" novalidate ng-submit="createCardForm.$valid && createCardCtrl.submit()">
+  <div for="formGroup">Title
+    <input type="text" class="form-control" placeholder="Title"  ng-model="card.title" required/>
+  </div>
+  <div for="formGroup">Description
+    <textarea class="form-control" placeholder="Description"  ng-model="card.description" required></textarea>
+  </div>
+
+  <div for="formGroup">Producer
+        <input type="text" class="form-control" placeholder="Producer"  ng-model="card.producer" required/>
+  </div>
+    <div for="formGroup">Genre:
+    <select id="genre-type" class="form-control" ng-options="option for option in option" ng-model="card.genre"></select>
+    </div>
+
+    <br/>
+  <button type="button" class="btn btn-default" ng-click="$parent.showAction=0">Back</button>
+  <div class="pull-right">
+    <button type="button" class="btn btn-success" ng-click="createCardCtrl.popUp()">Show Cards</button>
+    <button type="submit" class="btn btn-primary" ng-disabled="createCardForm.$invalid">Create Card</button>
+  </div>
+  </form>
+</div>

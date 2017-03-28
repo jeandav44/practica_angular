@@ -1,0 +1,36 @@
+.ng-invalid.ng-dirty{
+	border-color:#FF5B60;
+}
+.ng-valid.ng-dirty{
+	border-color:#69F174;
+}
+
+.products-table td {
+padding-right: 30px;
+padding-bottom:10px;
+}
+
+.image-logo { width: 60px; height: 60px; }
+
+.jumbotron{
+	margin-bottom: 0px !important;
+}
+
+/*--- Css Text ---*/
+.bold{
+	font-weight: bold;
+}
+
+.underline{
+	text-decoration: underline;
+}
+
+.separating{
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+.er{
+	display: block;
+  margin: auto;
+}

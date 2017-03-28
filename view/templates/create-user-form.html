@@ -1,0 +1,36 @@
+<div class="well" ng-controller="createUserController as createUserCtrl">
+  <h2>Create User</h2>
+  <form id="createUser" name="createUserForm" novalidate ng-submit="createUserForm.$valid && createUserCtrl.submit()">
+    <div for="formGroup">Nick:
+      <input type="text" class="form-control" placeholder="Example Nick: 'ExamPle123eXamPle'" ng-model="createUser.nick" ng-pattern="/^[A-Za-z0-9]*$/" required/>
+    </div>
+    <br/>
+    <div for="formGroup">Name:
+      <input type="text" class="form-control" placeholder="Example Name: 'Exemple'" ng-model="createUser.name" ng-pattern="/^[A-Z][A-Za-z]*$/" required/>
+    </div>
+    <br/>
+    <div for="formGroup">Surname:
+      <input type="text" class="form-control" placeholder="Example Surname: 'Exemple'" ng-model="createUser.surname" ng-pattern="/^[A-Z][A-Za-z]*$/" required/>
+    </div>
+    <br/>
+    <div for="formGroup">Mail:
+      <input type="text" class="form-control" placeholder="Example Mail: 'exemple@exemple.com'" ng-model="createUser.mail" ng-pattern="/^[a-z]+[a-z0-9._]+@[a-z]+\.[a-z.]{2,5}$/" required/>
+    </div>
+    <br/>
+    <div for="formGroup">Password:
+      <input type="text" class="form-control" placeholder="Example Password: 'eXeMpLe123'" ng-model="createUser.password" ng-pattern="/^[A-Za-z0-9]*$/" required/>
+    </div>
+    <br/>
+    <div for="formGroup">Rol:
+      <select class="form-control" ng-options="rols for rols in rols" ng-model="createUser.rol">
+      </select>
+    </div>
+    <br/>
+
+    <button type="button" class="btn btn-default" ng-click="$parent.showAction=0">Back</button>
+    <div class="pull-right">
+      <button type="button" class="btn btn-success" ng-click="createUserCtrl.showUsers()">Show Users</button>
+      <button type="submit" class="btn btn-primary" ng-disabled="createUserForm.$invalid">Create User</button>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,22 @@
+<div class="container well">
+        <form class="form-horizontal" name="addProduct" ng-controller="productController as productCtrl" ng-submit="addProduct.$valid && productCtrl.createCookie()" novalidate>
+
+          <h2>Buy a product</h2>
+          <br/>
+
+
+            <div class="form-group">
+              <label class="control-label col-md-5" for="formGroup">sdf:</label>
+              <div class="col-md-7">
+                <input type="text" id="cookieFiled1" class="form-control" ng-model="product.cookieFiled1" required />
+              </div>
+            </div>
+
+
+
+
+
+
+          <button class="btn btn-success pull-right" ng-disabled="addProduct.$invalid"> Add to the shopping cart </button>
+        </form>
+      </div>
